@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online - Streaming</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <h1>Malu Streaming - Productos </h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="#" id="cart-menu">Carrito <span id="cart-count">(0)</span></a></li>
+            </ul>
+        </nav>
+        <div id="greeting"></div>
+    </header>
+
+    <!-- Sección de Productos -->
+    <section class="products-section">
+        <h2>Nuestros Productos</h2>
+        <div class="product-grid">
+            <div class="product-card" data-product="Netflix" data-price="12999">
+                <img src="img/netflix.png" alt="Netflix">
+                <h3>Perfil Netflix</h3>
+                <p>$12,999 COP</p>
+                <button class="buy-btn">Agregar al carrito</button>
+            </div>
+            <div class="product-card" data-product="Amazon Prime" data-price="8000">
+                <img src="img/amazonprime.png" alt="Amazon Prime">
+                <h3>Perfil Amazon Prime</h3>
+                <p>$8,000 COP</p>
+                <button class="buy-btn">Agregar al carrito</button>
+            </div>
+            <div class="product-card" data-product="Disney+" data-price="12000">
+                <img src="img/disney.png" alt="Disney+">
+                <h3>Perfil Disney+ Premium Espn</h3>
+                <p>$12,0000 COP</p>
+                <button class="buy-btn">Agregar al carrito</button>
+            </div>
+            <div class="product-card" data-product="Disney+" data-price="8000">
+                <img src="img/disney.png" alt="Disney+">
+                <h3>Perfil  Disney+ Con Anuncios</h3>
+                <p>$8,000 COP</p>
+                <button class="buy-btn">Agregar al carrito</button>
+            </div>
+            <div class="product-card" data-product="Disney+" data-price="9000">
+                <img src="img/disney.png" alt="Disney+">
+                <h3>Perfil Disney+ Premium Sin Espn</h3>
+                <p>$9,000 COP</p>
+                <button class="buy-btn">Agregar al carrito</button>
+            </div>
+            <div class="product-card" data-product="Disney+" data-price="8000">
+                <img src="img/hbo.png" alt="Disney+">
+                <h3>Perfil HBO MAX</h3>
+                <p>$8,000 COP</p>
+                <button class="buy-btn">Agregar al carrito</button>
+            </div>
+            <div class="product-card" data-product="Disney+" data-price="8999">
+                <img src="img/disney.png" alt="Disney+">
+                <h3>Cuenta Disney+</h3>
+                <p>$8,999 COP</p>
+                <button class="buy-btn">Agregar al carrito</button>
+            </div>
+            <div class="product-card" data-product="Disney+" data-price="8999">
+                <img src="img/disney.png" alt="Disney+">
+                <h3>Cuenta Disney+</h3>
+                <p>$8,999 COP</p>
+                <button class="buy-btn">Agregar al carrito</button>
+            </div>
+            <div class="product-card" data-product="HBO Max" data-price="17999">
+                <img src="img/hbo.png" alt="HBO Max">
+                <h3>Cuenta HBO Max</h3>
+                <p>$17,999 COP</p>
+                <button class="buy-btn">Agregar al carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrito Desplegable en el lado derecho -->
+    <div class="cart-section" id="cart-section">
+        <div class="cart-header">
+            <h2>Carrito de Compras</h2>
+            <button id="close-cart-btn">Cerrar</button>
+        </div>
+        <div id="cart-items"></div>
+        <div id="cart-total"></div>
+        <button id="checkout-btn">Hacer Pedido por WhatsApp</button>
+    </div>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/573001234567?text=Hola, estoy interesado en crear una tienda online similar a la que vi."
+    target="_blank" class="whatsapp-button">
+  <img src="img/what.png" alt="WhatsApp Icon">
+</a>
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Streaming Shop. Todos los derechos reservados.</p>
+        <p id="date-time"></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

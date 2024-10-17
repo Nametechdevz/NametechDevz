@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Tienda Online</title>
+    
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('img/nametechDevz.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        header {
+            background-color: rgb(0, 51, 102);
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #ffffff; /* Amarillo */
+            text-decoration: none;
+            padding: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #ff0000; /* Rojo */
+            border-radius: 5px;
+            color: #fff;
+        }
+        .contact-section {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 20px auto;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 0.8s ease;
+            text-align: center;
+        }
+        .contact-section h2 {
+            color: #ff0000c9; /* Rojo */
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            text-align: left; /* Alineación a la izquierda */
+            color: #003366; /* Azul oscuro */
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="button"] {
+            background-color: #ff0000; /* Rojo */
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="button"]:hover {
+            background-color: #cc0000; /* Rojo más oscuro */
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: rgba(0, 51, 102, 0.8);
+            color: #fff;
+        }
+
+        /* Animaciones */
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <h1>Malu Streaming - Contacto</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de Contacto -->
+    <div class="contact-section">
+        <h2>Contáctanos</h2>
+        
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+
+        <label for="motivo">Motivo de Contacto:</label>
+        <select id="motivo" required>
+            <option value="">Selecciona una opción</option>
+            <option value="soporte">Soporte Técnico</option>
+            <option value="informacion">Información sobre Productos</option>
+            <option value="errores">Reportar un Error</option>
+            <option value="otro">Otro</option>
+        </select>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" rows="4" placeholder="Escribe aquí tu mensaje..."></textarea>
+
+        <input type="button" value="Enviar Mensaje" onclick="enviarWhatsApp()">
+    </div>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Streaming Shop. Todos los derechos reservados.</p>
+        <p id="date-time"></p>
+    </footer>
+
+    <script>
+        function enviarWhatsApp() {
+            const nombre = document.getElementById('nombre').value;
+            const motivo = document.getElementById('motivo').value;
+            const mensaje = document.getElementById('mensaje').value;
+
+            const mensajeCompleto = `Hola, mi nombre es ${nombre}. Motivo: ${motivo}. Mensaje: ${mensaje}`;
+            const enlaceWhatsApp = `https://wa.me/573001234567?text=${encodeURIComponent(mensajeCompleto)}`;
+            
+            // Abre el enlace de WhatsApp en una nueva pestaña
+            window.open(enlaceWhatsApp, '_blank');
+        }
+    </script>
+</body>
+</html>

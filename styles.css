@@ -1,0 +1,258 @@
+/* Estilos Globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    background-color: #001f3f; /* Azul Oscuro */
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    margin-left: 20px;
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ff4136; /* Rojo */
+}
+
+#greeting {
+    font-size: 18px;
+    color: #ff4136;
+}
+
+/* Sección de Productos */
+.products-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.products-section h2 {
+    font-size: 32px;
+    color: #001f3f;
+    margin-bottom: 40px;
+}
+
+/* Grid de Productos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #f4f4f4;
+    border: 2px solid #001f3f;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.product-card img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 18px;
+    color: #001f3f;
+    margin-bottom: 15px;
+}
+
+.buy-btn {
+    background-color: #001f3f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.buy-btn:hover {
+    background-color: #ff4136;
+}
+
+/* Carrito de Compras en el lado derecho */
+.cart-section {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #fff;
+    border-left: 2px solid #001f3f;
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#close-cart-btn {
+    background-color: #ff4136;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart-item div {
+    text-align: center;
+}
+
+#cart-total {
+    font-size: 24px;
+    text-align: right;
+    margin-top: 20px;
+}
+
+#checkout-btn {
+    background-color: #ff4136;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+}
+
+#checkout-btn:hover {
+    background-color: #001f3f;
+}
+
+/* estilos del BOTON DE WHATSAPP */
+   
+   .whatsapp-button {
+     
+    outline: dotted 2px rgb(31, 100, 3);
+     position: fixed;
+     bottom: 103px;
+     right: 20px;
+     width: 60PX;
+     height: 60px;
+     background-color: rgb(7, 7, 7);
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     z-index: 9999;
+     border: 1px solid rgb(79, 250, 0);
+   }
+   
+   .whatsapp-button img {
+     margin-bottom: 2px;
+     cursor: pointer;
+     width: 90%;
+     border-radius: 50px;
+   }
+   /* FINALIZADO */
+
+/* Botón Flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d36581;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-float img {
+    width: 40px;
+    height: 40px;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+}
+
+/* Pie de Página */
+footer {
+    background-color: #001f3f;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+#date-time {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 2fr); /* 2 productos por fila en móviles */
+    }
+
+    .cart-section {
+        width: 80%; /* Carrito ocupa toda la pantalla en móviles */
+    }
+}
+
+@media (min-width: 769px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr); /* 3 productos por fila en computadoras */
+    }
+}
